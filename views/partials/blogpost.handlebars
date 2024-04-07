@@ -1,4 +1,6 @@
-    <div class="blogpost text-pink-200 border-l-2 border-b-2 border-dashed rounded-bl-2xl border-pink-300 px-[30px]">
-        <h1 class="text-3xl">This is a BlogPost Title</h1>
-        <p class="my-[25px]">This is a blogpost content This is a blogpost content This is a blogpost content This is a blogpost content This is a blogpost content</p>
+    {{#each posts as |posts|}}
+    <div class="my-[50px] blogpost text-pink-200 border-l-2 border-b-2 border-dashed rounded-bl-2xl border-pink-300 px-[30px]">
+        <h1 class="text-3xl">{{posts.title}}</h1>
+        <p class="my-[25px]">{{posts.post_content}}</p>
     </div>
+    {{/each}}

@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
             include: [
                 {
                     model: User,
-                    attributes: ['name'],
+                    attributes: ['username'],
                 },
                 {
                     model: Comment,
@@ -25,7 +25,7 @@ router.get('/', async (req, res) => {
         // Pass serialized data and session flag into template
         res.render('homepage', { 
             posts, 
-            logged_in: req.session.logged_in 
+            // logged_in: req.session.logged_in 
         });
 
     } catch (err) {
