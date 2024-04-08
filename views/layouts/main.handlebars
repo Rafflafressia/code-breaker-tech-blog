@@ -2030,15 +2030,28 @@ Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojr+Uv4v/hXoWcDC34AAAAAASUVORK5CYII=" transform=
 
         </div>
         <nav class="m-auto w-[1780px] h-[50px] border-dashed border-2 rounded-lg border-pink-300">
-            <ul class="flex my-[10px]">
+			{{#if logged_in}}
+			<ul class="flex my-[10px]">
                 <li class="text-white relative text-lg left-[25px]"><a href="/">Homepage</a></li>
                 <li class="text-white relative text-lg left-[25px] mx-[50px] border-l-2 border-pink-300 px-[50px]"><a href="/dashboard">Dashboard</a></li>
-                <li class="text-white relative left-[1325px] text-lg"><a href="/contact">Login</a></li>
+                <li class="text-white relative left-[1300px] text-lg"><button class="logout">Logout</button></li>
             </ul>
+			{{else}}
+			<ul class="flex my-[10px]">
+                <li class="text-white relative text-lg left-[25px]"><a href="/">Homepage</a></li>
+                <li class="text-white relative text-lg left-[25px] mx-[50px] border-l-2 border-pink-300 px-[50px]"><a href="/dashboard">Dashboard</a></li>
+                <li class="text-white relative left-[1250px] text-lg"><a href="/login">Login</a></li>
+				<li class="text-white relative left-[1250px] text-lg border-l-2 mx-[10px] px-[10px] border-pink-300"><a href="/login">Sign Up</a></li>
+            </ul>
+			{{/if}}
+
+			
         </nav>
     </header>
     <main>
         {{{body}}}
     </main>
+
+	<script src="/js/userAccess.js"></script>
 </body>
 </html>
